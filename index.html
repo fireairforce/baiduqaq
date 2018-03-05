@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度一下，你就知道</title>
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
+    <link href="codeseriousserious/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://www.imooc.com/data/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var same=0;								
+            var interval=5000;			
+            var timer;				
+            $("#player img").hide();
+            $("#player img").eq(0).show();
+            $("#tags img").mouseover(function(){
+                var tags=$("#tags img").index(this);
+                if(same!=tags){
+                    $("#player img").fadeOut();
+                    $("#player img").eq(tags).fadeIn(500);	
+                }
+                same=tags;
+            })
+            
+            function autoplay(){
+                same++;
+                if(same>=$("#tags img").length){
+                    same=0;	
+                }
+                $("#player img").fadeOut();
+                $("#player img").eq(same).fadeIn(500);	
+            }
+            
+            function play(){
+                timer=setInterval(autoplay,interval);	
+            }
+            
+            function stop(){
+                clearInterval(timer);	
+            }
+            
+            $("#content").hover(function(){
+                stop();
+            },
+            function(){
+                play();	
+            })
+            
+            play();
+        })
+    </script>
+</head>
+<body>
+       <!-- <script>
+                alert("来看50er女装啊！！！");
+            </script>  -->        
+                <div id="player">
+                    <img src="img/1.jpg">
+                    <img src="img/2.jpg">
+                    <img src="img/3.jpg">
+                    <img src="img/4.jpg">
+                    <img src="img/5.jpg">
+                    <img src="img/6.jpg" /></div>
+                <div id="tags">
+                    <img src="img/1.jpg">
+                    <img src="img/2.jpg">
+                    <img src="img/3.jpg">
+                    <img src="img/4.jpg">
+                    <img src="img/5.jpg">
+                    <img src="img/6.jpg">        </div>
+    <div class="zoom">
+         <a href="http://news.baidu.com/" target="_blank" class="emm"><span>新闻</span></a>
+         <a href="https://www.hao123.com/" target="_blank" class="emm"><span>hao123</span></a>
+         <a href="https://map.baidu.com/" target="_blank" class="emm"><span>地图</span></a>
+         <a href="http://v.baidu.com/" target="_blank" class="emm"><span>视频</span></a>
+         <a href="https://tieba.baidu.com/index.html" target="_blank" class="emm"><span>贴吧</span></a>
+         <a href="http://xueshu.baidu.com/" target="_blank" class="emm"><span>学术</span></a>
+         <a href="https://map.baidu.com/" target="_blank" class="emm"><span>地图</span></a>
+         <a href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F&sms=5" target="_blank" class="emm"><span>登录</span></a>
+         <a href="http://www.baidu.com/gaoji/preferences.html" target="_blank" class="emm"><span>设置</span></a>
+        <div id="codeforce">
+        <nav>
+         <ul>
+         <li><a href="#" class="emm">更多功能</a>
+            <ul>
+                <li><a href="http://zoomdong.site/"  target="_blank">看看博客</a></li>
+                <li><a href="https://www.vocabulary.com/"  target="_blank">学学英语</a></li>
+                <li><a href="http://www.iqiyi.com/" target="_blank">看片看片</a></li>
+                <li><a href="http://www.taobao.com/" target="_blank">剁手剁手</a></li>
+            </ul>    
+        </li>
+        </ul>
+        </nav>
+        </div> 
+    </div>   
+    <div class="logo">
+        <img src="img/logo.jpg" alt="baidulogo" title="百度一下">
+    </div>   
+    <div class="searchk">
+        <!--<input type="text" id="text" style="width:542px; height:27px;">
+        <a href="https://www.baidu.com"><input type="submit" value="百度一下" style="width:100px;height:33px;color:white;background:rgba(0, 119, 255, 0.712);">
+        </a>-->
+        <form action="http://www.baidu.com/baidu" target="_blank">
+            <input name=tn type=hidden value=baidu>
+            <input type=text name=word size=30 style="width:542px; height:27px;">
+            <input type="submit" value="百度一下" style="width:100px;height:33px;color:white;background:rgba(0, 119, 255, 0.712);">
+            </form>
+    </div>
+    <div class="twocode">
+        <div id="threecode">
+            <div class="fourcode">
+                <div class="fivecode">
+                   <img src="img/code.jpg" alt="baiduerweima" title="微信扫一扫">
+                </div>
+                <div class="wenzi">
+                    <p>
+                        <span>百度</span>
+                    </p>
+                 </div>
+            </div>
+        </div>
+    </div>                
+    <div id="under">
+        <div class="oneforce">
+            <div id="twoforce">
+                <p id="threeforce">
+                    <a href="https://www.baidu.com/cache/sethelp/help.html" target="_blank">把百度设为主页</a>
+                    <a href="http://home.baidu.com/" target="_blank">关于百度</a>
+                    <a href="http://ir.baidu.com/phoenix.zhtml?c=188488&p=irol-irhome" target="_blank">About&nbsp;&nbsp;Baidu</a>
+                    <a href="http://e.baidu.com/?refer=888" target="_blank">百度推广</a>
+                </p>       
+        <p id="fourforce">
+        <a href="https://www.baidu.com/duty/" target="_blank" >使用百度前必读</a>
+       <a href="http://jianyi.baidu.com/" target="_blank">意见反馈</a>
+        <i class="icon-a"></i>
+        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" target="_blank">京公网安备11000002000001号</a>
+        </p> 
+            </div>
+         </div>
+    </div>                      
+</body>
+</html>
